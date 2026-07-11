@@ -550,5 +550,14 @@
     "Enable guides:": "启用参考线：",
     "Safe search:": "安全搜索：",
     "Exit confirmation:": "退出确认：",
-    "Thick guides:": "粗参考线："
+    "Thick guides:": "粗参考线：",
+    "squares": "方格",
+    "green": "绿色",
+    "grey": "灰色",
+    "dark": "深色",
+    "light": "浅色",
+    "pixels": "像素",
+    "inches": "英寸",
+    "centimeters": "厘米",
+    "millimetres": "毫米"
 }
