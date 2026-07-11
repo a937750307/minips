@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: [
@@ -7,8 +8,9 @@ module.exports = {
 	],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
-		publicPath: '/dist/'
+		filename: 'bundle.[contenthash].js',
+		publicPath: '/dist/',
+		clean: true
 	},
 	resolve: {
 		extensions: ['.js', '.css'],
@@ -43,6 +45,11 @@ module.exports = {
 		}),
 		new webpack.DefinePlugin({
 			VERSION: JSON.stringify(require("./package.json").version)
+		}),
+		new HtmlWebpackPlugin({
+			template: 'index.html',
+			inject: 'head',
+			scriptLoading: 'blocking'
 		}),
 	],
 	devtool: "cheap-module-source-map",
