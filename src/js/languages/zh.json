@@ -542,5 +542,13 @@
     "window.State.save() is removed. Use State.do_action() to manage undo history instead.": "window.State.save() 已移除。请使用 State.do_action() 管理撤销历史。",
     "layer(s) were skipped.": "个图层已跳过。",
     "key points:": "关键点：",
-    "could not be loaded.": "无法加载。"
+    "could not be loaded.": "无法加载。",
+    "Transparency background:": "透明背景：",
+    "Theme": "主题",
+    "Units": "单位",
+    "Enable snap:": "启用吸附：",
+    "Enable guides:": "启用参考线：",
+    "Safe search:": "安全搜索：",
+    "Exit confirmation:": "退出确认：",
+    "Thick guides:": "粗参考线："
 }
