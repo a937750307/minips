@@ -112,7 +112,7 @@ class Base_state_class {
 		}
 
 		if (error_during_free) {
-			alertify.error('A problem occurred while removing undo history. It\'s suggested you save your work and refresh the page in order to free up memory.');
+			alertify.error(window.translate_text('A problem occurred while removing undo history. It\'s suggested you save your work and refresh the page in order to free up memory.'));
 		}
 		return { status: 'completed' };
 	}
@@ -131,7 +131,7 @@ class Base_state_class {
 			await action.do();
 			this.action_history_index++;
 		} else {
-			alertify.success('There\'s nothing to redo', 3);
+			alertify.success(window.translate_text('There\'s nothing to redo'), 3);
 		}
 	}
 
@@ -140,7 +140,7 @@ class Base_state_class {
 			this.action_history_index--;
 			await this.action_history[this.action_history_index].undo();
 		} else {
-			alertify.success('There\'s nothing to undo', 3);
+			alertify.success(window.translate_text('There\'s nothing to undo'), 3);
 		}
 	}
 
@@ -189,7 +189,7 @@ class Base_state_class {
 			}
 		}
 		if (has_error) {
-			alertify.error('A problem occurred while removing undo history. It\'s suggested you save your work and refresh the page in order to free up memory.');
+			alertify.error(window.translate_text('A problem occurred while removing undo history. It\'s suggested you save your work and refresh the page in order to free up memory.'));
 		}
 		return {
 			total_memory_freed,
@@ -198,7 +198,7 @@ class Base_state_class {
 	}
 
 	save() {
-		const message = 'window.State.save() is removed. Use State.do_action() to manage undo history instead.';
+		const message = window.translate_text('window.State.save() is removed. Use State.do_action() to manage undo history instead.');
 		console.warn(message);
 		alertify.error(message);
 	}

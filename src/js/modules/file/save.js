@@ -203,7 +203,7 @@ class File_save_class {
 	save_data_url() {
 		var max = 10 * 1000 * 1000;
 		if (config.WIDTH * config.WIDTH > 10 * 1000 * 1000) {
-			alertify.error('Size is too big, max ' + this.Helper.number_format(max, 0) + ' pixels.');
+			alertify.error(window.translate_text('Size is too big, max') + ' ' + this.Helper.number_format(max, 0) + ' pixels.');
 			return;
 		}
 
@@ -220,7 +220,7 @@ class File_save_class {
 
 		max = 1000 * 1000;
 		if (data_url.length > max) {
-			alertify.error('Size is too big, max ' + this.Helper.number_format(max, 0) + ' bytes.');
+			alertify.error(window.translate_text('Size is too big, max') + ' ' + this.Helper.number_format(max, 0) + ' bytes.');
 			return;
 		}
 
@@ -639,7 +639,7 @@ class File_save_class {
 		if (data_header != actualType && data_header != "text/plain") {
 			if (show_error == undefined || show_error == true) {
 				//error - no support
-				alertify.error('Your browser does not support this format.');
+				alertify.error(window.translate_text('Your browser does not support this format.'));
 			}
 			return false;
 		}

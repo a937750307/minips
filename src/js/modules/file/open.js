@@ -81,7 +81,7 @@ class File_open_class {
 	open_file() {
 		var _this = this;
 
-		alertify.success('You can also drag and drop items into browser.');
+		alertify.success(window.translate_text('You can also drag and drop items into browser.'));
 
 		document.getElementById("tmp").innerHTML = '';
 		var a = document.createElement('input');
@@ -110,7 +110,7 @@ class File_open_class {
 		}
 
 		function handleError(error) {
-			alertify.error('Sorry, cold not load getUserMedia() data: ' + error);
+			alertify.error(window.translate_text('Sorry, cold not load getUserMedia() data:') + ' ' + error);
 		}
 		
 		var settings = {
@@ -238,7 +238,7 @@ class File_open_class {
 			};
 		};
 		img.onerror = function (ex) {
-			alertify.error('Sorry, image could not be loaded. Try copy image and paste it.');
+			alertify.error(window.translate_text('Sorry, image could not be loaded. Try copy image and paste it.'));
 		};
 		img.src = data;
 	}
@@ -296,7 +296,7 @@ class File_open_class {
 			f = files[i];
 			if (!f.type.match('image.*') && !f.name.match('.json')) {
 				if(dir_opened == false) {
-					alertify.error('Wrong file type, must be image or json.');
+					alertify.error(window.translate_text('Wrong file type, must be image or json.'));
 				}
 				continue;
 			}
@@ -412,7 +412,7 @@ class File_open_class {
 		}).then(function(json) {
 			_this.load_json(json, false);
 		}).catch(function(ex) {
-			alertify.error('Sorry, image could not be loaded.');
+			alertify.error(window.translate_text('Sorry, image could not be loaded.'));
 		});
 	}
 
@@ -443,7 +443,7 @@ class File_open_class {
 			}).then(function(json) {
 				_this.load_json(json, false);
 			}).catch(function(ex) {
-				alertify.error('Sorry, image could not be loaded.');
+				alertify.error(window.translate_text('Sorry, image could not be loaded.'));
 			});
 		}
 		else{
@@ -487,7 +487,7 @@ class File_open_class {
 			);
 		};
 		img.onerror = function (ex) {
-			alertify.error('Sorry, image could not be loaded. Try copy image and paste it.');
+			alertify.error(window.translate_text('Sorry, image could not be loaded. Try copy image and paste it.'));
 		};
 		img.src = url;
 	}

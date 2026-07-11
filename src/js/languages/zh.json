@@ -424,7 +424,7 @@
     "Shift + S": "Shift + S",
     "Shortcut Key:": "快捷键：",
     "Show": "显示",
-    "Show \/ Hide": "显示 \/ 隐藏",
+    "Show / Hide": "显示 / 隐藏",
     "Show file size:": "显示文件大小：",
     "Simple": "简单",
     "Size is too big, max": "尺寸太大，最大值为",
@@ -531,5 +531,16 @@
     "Zoom blur": "缩放模糊",
     "Zoom in": "放大",
     "Zoom out": "缩小",
-    "Zoom:": "缩放："
+    "Zoom:": "缩放：",
+    "Layer must be vector or image (convert it to raster).": "图层必须是矢量或图像（转换为栅格）。",
+    "Error: layer must be image.": "错误：图层必须是图像。",
+    "Error: can not load image.": "错误：无法加载图像。",
+    "Tools class not found:": "找不到工具类：",
+    "Error: wrong key:": "错误：错误的键：",
+    "There's nothing to redo": "没有可重做的操作",
+    "There's nothing to undo": "没有可撤销的操作",
+    "window.State.save() is removed. Use State.do_action() to manage undo history instead.": "window.State.save() 已移除。请使用 State.do_action() 管理撤销历史。",
+    "layer(s) were skipped.": "个图层已跳过。",
+    "key points:": "关键点：",
+    "could not be loaded.": "无法加载。"
 }

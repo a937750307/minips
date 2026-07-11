@@ -180,7 +180,7 @@ class Crop_class extends Base_tools_class {
 		this.GUI_tools.show_action_attributes();
 
 		if (selection.width == null || selection.width == 0 || selection.height == 0) {
-			alertify.error('Empty selection');
+			alertify.error(window.translate_text('Empty selection'));
 			return;
 		}
 		
@@ -197,7 +197,7 @@ class Crop_class extends Base_tools_class {
 			}
 		}
 		if (rotated_name !== false) {
-			alertify.error('Crop on rotated layer is not supported. Convert it to raster to continue.' + '('+ rotated_name + ')');
+			alertify.error(window.translate_text('Crop on rotated layer is not supported. Convert it to raster to continue.') + ' (' + rotated_name + ')');
 			return;
 		}
 

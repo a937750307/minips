@@ -370,7 +370,7 @@ class GUI_tools_class {
 				itemDom.appendChild($colorInput[0]);
 			}
 			else {
-				alertify.error('Error: unsupported attribute type:' + typeof item + ', ' + k);
+				alertify.error(window.translate_text('Error: unsupported attribute type:') + ' ' + typeof item + ', ' + k);
 			}
 		}
 

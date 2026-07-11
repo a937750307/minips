@@ -56,7 +56,7 @@ class Copy_class {
 			});
 		}
 		else{
-			alertify.error('Missing permissions to write to Clipboard.cc');
+			alertify.error(window.translate_text('Missing permissions to write to Clipboard.cc'));
 		}
 	}
 

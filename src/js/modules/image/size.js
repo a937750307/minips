@@ -67,7 +67,7 @@ class Image_size_class {
 		
 		//aspect ratio
 		if (isNaN(width) && isNaN(height)){
-			alertify.error('Wrong dimensions');
+			alertify.error(window.translate_text('Wrong dimensions'));
 			return;
 		}
 		if (isNaN(width)){

@@ -18,12 +18,12 @@ class Tools_contentFill_class {
 		var _this = this;
 
 		if (config.layer.type != 'image') {
-			alertify.error('This layer must contain an image. Please convert it to raster to apply this tool.');
+			alertify.error(window.translate_text('This layer must contain an image. Please convert it to raster to apply this tool.'));
 			return;
 		}
 		if (config.layer.x == 0 && config.layer.y == 0 && config.layer.width == config.WIDTH
 			&& config.layer.height == config.HEIGHT) {
-			alertify.error('Can not use this tool on current layer: image already takes all area.');
+			alertify.error(window.translate_text('Can not use this tool on current layer: image already takes all area.'));
 			return;
 		}
 

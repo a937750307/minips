@@ -128,7 +128,7 @@ class Selection_class extends Base_tools_class {
 			return;
 
 		if (config.layer.type != 'image') {
-			alertify.error('This layer must contain an image. Please convert it to raster to apply this tool.');
+			alertify.error(window.translate_text('This layer must contain an image. Please convert it to raster to apply this tool.'));
 			return;
 		}
 
@@ -234,7 +234,7 @@ class Selection_class extends Base_tools_class {
 
 	select_all() {
 		if (config.layer.type != 'image') {
-			alertify.error('This layer must contain an image. Please convert it to raster to apply this tool.');
+			alertify.error(window.translate_text('This layer must contain an image. Please convert it to raster to apply this tool.'));
 			return;
 		}
 		let actions = [];
@@ -276,12 +276,12 @@ class Selection_class extends Base_tools_class {
 		var layer = config.layer;
 
 		if (config.layer.type != 'image') {
-			alertify.error('This layer must contain an image. Please convert it to raster to apply this tool.');
+			alertify.error(window.translate_text('This layer must contain an image. Please convert it to raster to apply this tool.'));
 			return;
 		}
 
 		if (selection == null) {
-			alertify.error('Nothing is selected.');
+			alertify.error(window.translate_text('Nothing is selected.'));
 			return;
 		}
 

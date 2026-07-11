@@ -81,7 +81,7 @@ class Image_resize_class {
 	async do_resize(params) {
 		//validate
 		if (isNaN(params.width) && isNaN(params.height) && isNaN(params.width_percent) && isNaN(params.height_percent)) {
-			alertify.error('Missing at least 1 size parameter.');
+			alertify.error(window.translate_text('Missing at least 1 size parameter.'));
 			return false;
 		}
 		
@@ -99,7 +99,7 @@ class Image_resize_class {
 				}
 			}
 			if (skips > 0) {
-				alertify.error(skips + ' layer(s) were skipped.');
+				alertify.error(skips + ' ' + window.translate_text('layer(s) were skipped.'));
 			}
 			actions = actions.concat(this.resize_gui(params));
 		}
@@ -208,7 +208,7 @@ class Image_resize_class {
 		//only images supported at this point
 		else if (layer.type != 'image') {
 			//error - no support
-			alertify.error('Layer must be vector or image (convert it to raster).');
+			alertify.error(window.translate_text('Layer must be vector or image (convert it to raster).'));
 			throw new Error('Layer is not compatible with resize');
 		}
 		
@@ -218,7 +218,7 @@ class Image_resize_class {
 
 		//validate
 		if (mode == "Hermite" && (width > canvas.width || height > canvas.height)) {
-			alertify.warning('Scaling up is not supported in Hermite, using Lanczos.');
+			alertify.warning(window.translate_text('Scaling up is not supported in Hermite, using Lanczos.'));
 			mode = "Lanczos";
 		}
 		

@@ -14,7 +14,7 @@ class Layer_differences_class {
 	differences() {
 		var _this = this;
 		if (this.Base_layers.find_previous(config.layer.id) == null) {
-			alertify.error('There are no layers behind.');
+			alertify.error(window.translate_text('There are no layers behind.'));
 			return false;
 		}
 

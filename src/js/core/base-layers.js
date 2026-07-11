@@ -204,7 +204,7 @@ class Base_layers_class {
 			this.View_ruler.render_ruler();
 
 			if (this.render_success === false) {
-				alertify.error("Rendered with errors.");
+				alertify.error(window.translate_text("Rendered with errors."));
 			}
 		}
 
@@ -525,7 +525,7 @@ class Base_layers_class {
 				return config.layers[i];
 			}
 		}
-		alertify.error("Error: can not find layer with id:" + id);
+		alertify.error(window.translate_text('Error: can not find layer with id:') + ' ' + id);
 		return null;
 	}
 

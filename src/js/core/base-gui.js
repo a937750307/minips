@@ -173,11 +173,11 @@ class Base_gui_class {
 
 			//call module
 			if (this.modules[module] == undefined) {
-				alertify.error('Modules class not found: ' + module);
+				alertify.error(window.translate_text('Modules class not found:') + ' ' + module);
 				return;
 			}
 			if (this.modules[module][function_name] == undefined) {
-				alertify.error('Module function not found. ' + module + '.' + function_name);
+				alertify.error(window.translate_text('Module function not found.') + ' ' + module + '.' + function_name);
 				return;
 			}
 			this.modules[module][function_name](param);

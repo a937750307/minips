@@ -33,7 +33,7 @@ export class Update_layer_image_action extends Base_action {
 			throw new Error('Aborted - layer with specified id doesn\'t exist');
 		}
 		if (this.reference_layer.type != 'image'){
-			alertify.error('Error: layer must be image.');
+			alertify.error(window.translate_text('Error: layer must be image.'));
 			throw new Error('Aborted - layer is not an image');
 		}
 
@@ -143,7 +143,7 @@ export class Update_layer_image_action extends Base_action {
 		this.old_link_database_id = null;
 		this.reference_layer = null;
 		if (has_error) {
-			alertify.error('A problem occurred while removing undo history. It\'s suggested you save your work and refresh the page in order to free up memory.');
+			alertify.error(window.translate_text('A problem occurred while removing undo history. It\'s suggested you save your work and refresh the page in order to free up memory.'));
 		}
 	}
 }

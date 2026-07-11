@@ -61,7 +61,7 @@ class View_guides_class {
 			//was disabled
 			config.guides_enabled = true;
 			this.Helper.setCookie('guides', 1);
-			alertify.warning('Guides enabled.');
+			alertify.warning(window.translate_text('Guides enabled.'));
 		}
 
 		config.need_render = true;

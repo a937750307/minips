@@ -53,7 +53,7 @@ class Animation_class extends Base_tools_class {
 
 		var params = this.getParams();
 		if (config.layers.length == 1) {
-			alertify.error('Can not animate 1 layer.');
+			alertify.error(window.translate_text('Can not animate 1 layer.'));
 			return;
 		}
 		this.stop();

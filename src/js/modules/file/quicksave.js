@@ -34,7 +34,7 @@ class File_quicksave_class {
 		//save image data
 		var data_json = this.File_save.export_as_json();
 		if (data_json.length > 5000000) {
-			alertify.error('Sorry, image is too big, max 5 MB.');
+			alertify.error(window.translate_text('Sorry, image is too big, max 5 MB.'));
 			return false;
 		}
 		localStorage.setItem('quicksave_data', data_json);

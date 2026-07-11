@@ -42,11 +42,11 @@ class Blur_class extends Base_tools_class {
 			return;
 		}
 		if (config.layer.type != 'image') {
-			alertify.error('This layer must contain an image. Please convert it to raster to apply this tool.');
+			alertify.error(window.translate_text('This layer must contain an image. Please convert it to raster to apply this tool.'));
 			return;
 		}
 		if (config.layer.rotate || 0 > 0) {
-			alertify.error('Erase on rotate object is disabled. Please rasterize first.');
+			alertify.error(window.translate_text('Erase on rotate object is disabled. Please rasterize first.'));
 			return;
 		}
 		this.started = true;

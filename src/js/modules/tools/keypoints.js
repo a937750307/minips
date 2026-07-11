@@ -30,7 +30,7 @@ class Tools_keypoints_class {
 	keypoints(return_data) {
 
 		if (config.layer.type != 'image') {
-			alertify.error('This layer must contain an image. Please convert it to raster to apply this tool.');
+			alertify.error(window.translate_text('This layer must contain an image. Please convert it to raster to apply this tool.'));
 			return;
 		}
 
@@ -139,7 +139,7 @@ class Tools_keypoints_class {
 
 		//show points?
 		if (return_data === undefined || return_data !== true) {
-			alertify.success('key points: ' + points.length);
+			alertify.success(window.translate_text('key points:') + ' ' + points.length);
 
 			var size = 3;
 			ctx.clearRect(0, 0, clone.width, clone.height);

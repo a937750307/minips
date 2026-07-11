@@ -12,7 +12,7 @@ class Effects_invert_class extends Effects_common_class {
 
 	invert(filter_id) {
 		if (config.layer.type == null) {
-			alertify.error('Layer is empty.');
+			alertify.error(window.translate_text('Layer is empty.'));
 			return;
 		}
 

@@ -34,7 +34,7 @@ class Tools_sprites_class {
 		gap = parseInt(gap);
 
 		if (config.layers.length == 1) {
-			alertify.error('There is only 1 layer.');
+			alertify.error(window.translate_text('There is only 1 layer.'));
 			return false;
 		}
 

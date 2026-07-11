@@ -15,7 +15,7 @@ class Effects_borders_class {
 
 	borders(filter_id) {
 		if (config.layer.type == null) {
-			alertify.error('Layer is empty.');
+			alertify.error(window.translate_text('Layer is empty.'));
 			return;
 		}
 

@@ -60,7 +60,7 @@ export class Insert_layer_action extends Base_action {
 		// Build data
 		for (let i in this.settings) {
 			if (typeof layer[i] == "undefined" && !i.startsWith('_')) {
-				alertify.error('Error: wrong key: ' + i);
+				alertify.error(window.translate_text('Error: wrong key:') + ' ' + i);
 				continue;
 			}
 			layer[i] = this.settings[i];
@@ -120,14 +120,14 @@ export class Insert_layer_action extends Base_action {
 						};
 						layer.link.onerror = (error) => {
 							resolve(error);
-							alertify.error('Sorry, image could not be loaded.');
+							alertify.error(window.translate_text('Sorry, image could not be loaded.'));
 						};
 						layer.link.src = layer.data;
 						layer.link.crossOrigin = "Anonymous";
 					});
 				}
 				else {
-					alertify.error('Error: can not load image.');
+					alertify.error(window.translate_text('Error: can not load image.'));
 				}
 			}
 		}

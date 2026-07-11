@@ -50,7 +50,7 @@ export class Activate_tool_action extends Base_action {
 
 			//check module
 			if (app.GUI.GUI_tools.tools_modules[key] == undefined) {
-				alertify.error('Tools class not found: ' + key);
+				alertify.error(window.translate_text('Tools class not found:') + ' ' + key);
 				return;
 			}
 

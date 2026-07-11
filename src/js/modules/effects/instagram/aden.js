@@ -13,7 +13,7 @@ class Effects_aden_class {
 
 	aden() {
 		if (config.layer.type != 'image') {
-			alertify.error('This layer must contain an image. Please convert it to raster to apply this tool.');
+			alertify.error(window.translate_text('This layer must contain an image. Please convert it to raster to apply this tool.'));
 			return;
 		}
 

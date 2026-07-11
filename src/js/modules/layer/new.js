@@ -43,11 +43,11 @@ class Layer_new_class {
 		var layer = config.layer;
 
 		if (selection.width === null || config.layer.type != 'image') {
-			alertify.error('Empty selection or type not image.');
+			alertify.error(window.translate_text('Empty selection or type not image.'));
 			return;
 		}
 		if (config.TOOL.name != 'selection') {
-			alertify.error('Empty selection or type not image.');
+			alertify.error(window.translate_text('Empty selection or type not image.'));
 			return;
 		}
 

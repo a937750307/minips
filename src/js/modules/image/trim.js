@@ -87,7 +87,7 @@ class Image_trim_class {
 		var layer = this.Base_layers.get_layer(layer_id);
 		
 		if (layer.type != 'image') {
-			alertify.error('Skip - layer must be image.');
+			alertify.error(window.translate_text('Skip - layer must be image.'));
 			return false;
 		}
 		

@@ -63,7 +63,7 @@ function load_font_family({ family, variants }, successCallback) {
 					resolve();
 				},
 				fontinactive: (family) => {
-					alertify.error('Font ' + family + ' could not be loaded.');
+					alertify.error(window.translate_text('Font') + ' ' + family + ' ' + window.translate_text('could not be loaded.'));
 					fontLoadPromiseMap.delete(family);
 					reject();
 				}
@@ -1983,7 +1983,7 @@ class Google_fonts_search_class {
 					this.fontListFiltered = data.items;
 					this.render_font_list();
 				}).fail(function () {
-					alertify.error('Error loading the list of fonts from Google.');
+					alertify.error(window.translate_text('Error loading the list of fonts from Google.'));
 				});
 			},
 			on_finish: () => {

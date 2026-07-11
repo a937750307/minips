@@ -11,7 +11,7 @@ class Layer_merge_class {
 
 	merge() {
 		if (this.Base_layers.find_previous(config.layer.id) == null) {
-			alertify.error('There are no layers behind.');
+			alertify.error(window.translate_text('There are no layers behind.'));
 			return false;
 		}
 

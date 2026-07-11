@@ -130,7 +130,7 @@ class Media_class extends Base_tools_class {
 						var data = _this.cache[URL];
 
 						if (parseInt(data.totalHits) == 0) {
-							alertify.error('Your search did not match any images.');
+							alertify.error(window.translate_text('Your search did not match any images.'));
 						}
 
 						var pages = Math.ceil(data.totalHits / _this.per_page);
@@ -143,14 +143,14 @@ class Media_class extends Base_tools_class {
 						_this.cache[URL] = data;
 
 						if (parseInt(data.totalHits) == 0) {
-							alertify.error('Your search did not match any images.');
+							alertify.error(window.translate_text('Your search did not match any images.'));
 						}
 
 						var pages = Math.ceil(data.totalHits / _this.per_page);
 						_this.search(params.query, data.hits, pages);
 					})
 					.fail(function () {
-						alertify.error('Error connecting to service.');
+						alertify.error(window.translate_text('Error connecting to service.'));
 					});
 				}
 			},

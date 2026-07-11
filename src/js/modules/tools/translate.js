@@ -5,6 +5,20 @@ import alertify from './../../../../node_modules/alertifyjs/build/alertify.min.j
 
 var instance = null;
 
+// 全局翻译函数，供 JS 代码中调用
+window.translate_text = function (text, lang_code) {
+	if (instance == null) {
+		return text;
+	}
+	if (lang_code == undefined) {
+		lang_code = config.LANG;
+	}
+	if (instance.translations[text] && instance.translations[text][lang_code]) {
+		return instance.translations[text][lang_code];
+	}
+	return text;
+};
+
 class Tools_translate_class {
 
 	constructor() {
@@ -41,7 +55,7 @@ class Tools_translate_class {
 			config.LANG = lang_code;
 		}
 		else {
-			alertify.error('Translate error, can not find dictionary: ' + lang_code);
+			alertify.error(window.translate_text('Translate error, can not find dictionary:') + ' ' + lang_code);
 		}
 	}
 
