@@ -13,7 +13,9 @@
   "scripts": {
     "server": "webpack serve --mode development --env development --open",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "build:deploy": "webpack --mode production && node scripts/prepare-deploy.js",
+    "deploy": "npm run build:deploy && wrangler deploy"
   },
   "repository": {
     "type": "git",

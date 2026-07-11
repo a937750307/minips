@@ -1,0 +1,6 @@
+name = "minips"
+compatibility_date = "2026-07-11"
+
+# 只上传 deploy/ 目录下的静态资源，避免把 node_modules 打包进去
+[assets]
+directory = "deploy"
