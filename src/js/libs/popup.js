@@ -491,7 +491,7 @@ class Dialog_class {
 								sel = 'selected="selected"';
 							if (parameter.value == undefined && k == 0)
 								sel = 'selected="selected"';
-							html += '<option ' + sel + ' name="' + parameter.values[j] + '" class="trn">' + parameter.values[j]
+							html += '<option ' + sel + ' value="' + parameter.values[j] + '" class="trn">' + parameter.values[j]
 								+ '</option>';
 							k++;
 						}
